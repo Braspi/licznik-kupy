@@ -42,7 +42,7 @@ function App() {
   );
 
   useEffect(() => {
-    const dateToString = (date) => date.toISOString().split("T")[0];
+    const dateToString = (date) => dateToLocalString(date);
 
     localStorage.setItem("poop_counter", poopCount);
     localStorage.setItem("poop_date", dateToString(selectedDate));
@@ -66,7 +66,15 @@ function App() {
     });
   };
 
-  const dateToString = (dateObj) => dateObj.toISOString().split("T")[0];
+  const dateToString = (dateObj) => dateToLocalString(dateObj);
+
+  const dateToLocalString = (date) => {
+    const y = date.getFullYear();
+    const m = String(date.getMonth() + 1).padStart(2, "0");
+    const d = String(date.getDate()).padStart(2, "0");
+    return `${y}-${m}-${d}`;
+  };
+
 
   const handleAddOne = (dateStr) => {
     const dateObj = new Date(dateStr);
@@ -135,6 +143,12 @@ function App() {
     setSelectedDate(new Date(today));
   };
 
+  const parseLocalDate = (dateStr) => {
+    const [y, m, d] = dateStr.split("-").map(Number);
+    return new Date(y, m - 1, d);
+  };
+
+
   // Eksport do .txt
   const exportData = () => {
     let text = `Licznik Kup 💩 - Eksport danych\n`;
@@ -150,7 +164,12 @@ function App() {
 
       const dayEntries = Object.entries(monthData).sort((a, b) => b[0].localeCompare(a[0]));
       for (const [date, count] of dayEntries) {
-        const formatted = new Date(date).toLocaleDateString("pl-PL", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+        const formatted = parseLocalDate(date).toLocaleDateString("pl-PL", {
+          weekday: "long",
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        });
         text += `  📅 ${formatted}: ${count} × 💩\n`;
       }
       text += `\n`;
@@ -158,12 +177,21 @@ function App() {
 
     text += `Dane zapisane tylko lokalnie w przeglądarce.\nNikt poza Tobą ich nie widzi.`;
 
-    const blob = new Blob([text], { type: "text/plain" });
+    // ✅ UTF-8 + BOM (polskie znaki)
+    const blob = new Blob(
+        ["\uFEFF" + text],
+        { type: "text/plain;charset=utf-8" }
+    );
+
     const url = URL.createObjectURL(blob);
+
     const a = document.createElement("a");
     a.href = url;
     a.download = `licznik-kup-export-${new Date().getFullYear()}.txt`;
+    document.body.appendChild(a); // 🔴 KLUCZOWE
     a.click();
+
+    document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
 
