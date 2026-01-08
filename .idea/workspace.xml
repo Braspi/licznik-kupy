@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f34429d-e51f-4679-832d-af961e2f26e6" name="Changes" comment="fn commit">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+    <list default="true" id="1f34429d-e51f-4679-832d-af961e2f26e6" name="Changes" comment="deploy.yml">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1767907600782</updated>
-      <workItem from="1767907602015" duration="5472000" />
+      <workItem from="1767907602015" duration="6429000" />
     </task>
     <task id="LOCAL-00001" summary="fn commit">
       <option name="closed" value="true" />
@@ -74,7 +74,23 @@
       <option name="project" value="LOCAL" />
       <updated>1767912104543</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="deploy.yml">
+      <option name="closed" value="true" />
+      <created>1767913152249</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1767913152249</updated>
+    </task>
+    <task id="LOCAL-00003" summary="deploy.yml">
+      <option name="closed" value="true" />
+      <created>1767913348905</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1767913348905</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fn commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="fn commit" />
+    <MESSAGE value="deploy.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="deploy.yml" />
   </component>
 </project>
