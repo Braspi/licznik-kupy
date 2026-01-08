@@ -1,43 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <!-- Ikony i favicon -->
+  <link rel="icon" href="%PUBLIC_URL%/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/logo.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="%PUBLIC_URL%/logo.png" />
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <!-- Podstawowe -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <!-- SEO -->
+  <meta name="description" content="Licznik Kup 💩 – prywatna aplikacja do śledzenia kup. Statystyki dzienne, miesięczne, wykresy i eksport danych. 100% prywatności!" />
+  <meta name="keywords" content="licznik kup, śledzenie kup, aplikacja do liczenia kup, statystyki kup, nawyki toaletowe, prywatny licznik kup" />
+  <meta name="author" content="Licznik Kup" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph (Facebook, LinkedIn itp.) -->
+  <meta property="og:title" content="Licznik Kup 💩 – Prywatny licznik nawyków toaletowych" />
+  <meta property="og:description" content="Dodawaj kupę codziennie, oglądaj statystyki i wykresy. Dane tylko u Ciebie – pełna prywatność!" />
+  <meta property="og:image" content="%PUBLIC_URL%/logo.png" />
+  <meta property="og:url" content="https://twoja-strona.pl" /> <!-- zmień na swoją domenę jeśli masz -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pl_PL" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Licznik Kup 💩" />
+  <meta name="twitter:description" content="Prywatna apka do liczenia kup – statystyki, wykresy, eksport!" />
+  <meta name="twitter:image" content="%PUBLIC_URL%/logo.png" />
+
+  <!-- Tytuł -->
+  <title>Licznik Kup 💩 – Prywatny licznik kup</title>
+
+  <!-- Manifest PWA -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+</head>
+<body>
+<noscript>Do działania aplikacji wymagany jest JavaScript.</noscript>
+<div id="root"></div>
+</body>
 </html>
