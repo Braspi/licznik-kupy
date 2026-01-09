@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f34429d-e51f-4679-832d-af961e2f26e6" name="Changes" comment="deploy.yml">
+    <list default="true" id="1f34429d-e51f-4679-832d-af961e2f26e6" name="Changes" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
@@ -66,7 +66,7 @@
       <updated>1767907600782</updated>
       <workItem from="1767907602015" duration="6583000" />
       <workItem from="1767915741285" duration="610000" />
-      <workItem from="1767992476796" duration="284000" />
+      <workItem from="1767992476796" duration="637000" />
     </task>
     <task id="LOCAL-00001" summary="fn commit">
       <option name="closed" value="true" />
@@ -100,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767914236995</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix">
+      <option name="closed" value="true" />
+      <created>1767992782978</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1767992782978</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +117,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fn commit" />
     <MESSAGE value="deploy.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="deploy.yml" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>

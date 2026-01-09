@@ -41,6 +41,8 @@ function App() {
       JSON.parse(localStorage.getItem("monthly_summary")) || {}
   );
 
+  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
+
   useEffect(() => {
     const dateToString = (date) => dateToLocalString(date);
 
@@ -196,7 +198,14 @@ function App() {
   };
 
   // Wykres
-  const sortedMonthsAsc = Object.keys(monthlySummary).sort();
+  const availableYears = [
+    ...new Set(Object.keys(monthlySummary).map(k => k.split("-")[0]))
+  ].sort().reverse();
+
+
+  const sortedMonthsAsc = Object.keys(monthlySummary)
+      .filter(m => m.startsWith(selectedYear + "-"))
+      .sort();
   const chartLabels = sortedMonthsAsc.map(m => formatMonthName(m));
   const chartDataValues = sortedMonthsAsc.map(m => Object.values(monthlySummary[m]).reduce((a, b) => a + b, 0));
 
@@ -343,12 +352,25 @@ function App() {
                       })}
                     </div>
 
-                    {/* Wykres */}
                     <h5 className="text-center mb-3">Porównanie miesięcy</h5>
+
+                    <div className="d-flex justify-content-center mb-2">
+                      <select
+                          className="form-select w-auto"
+                          value={selectedYear}
+                          onChange={e => setSelectedYear(e.target.value)}
+                      >
+                        {availableYears.map(y => (
+                            <option key={y} value={y}>{y}</option>
+                        ))}
+                      </select>
+                    </div>
+
                     <div className={`rounded shadow-sm p-3 ${darkMode ? "bg-black" : "bg-light"}`}
                          style={{height: "300px"}}>
                       <Bar options={chartOptions} data={chartData}/>
                     </div>
+
                   </>
               )}
 
