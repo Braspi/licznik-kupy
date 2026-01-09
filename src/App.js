@@ -130,7 +130,7 @@ function App() {
   const goToPreviousDay = () => {
     const prev = new Date(selectedDate);
     prev.setDate(selectedDate.getDate() - 1);
-    if (prev >= startDate) setSelectedDate(prev);
+    setSelectedDate(prev);
   };
 
   const goToNextDay = () => {
@@ -267,10 +267,13 @@ function App() {
                   <h5 className="text-center mb-3">Data kupy</h5>
                   <div className="d-flex flex-column gap-3 align-items-center mb-3">
                     <div className="d-flex gap-2 w-100 justify-content-center flex-wrap">
-                      <button onClick={goToPreviousDay} className="btn btn-outline-primary btn-sm flex-fill"
-                              disabled={selectedDate.getTime() === startDate.getTime()}>
+                      <button
+                          onClick={goToPreviousDay}
+                          className="btn btn-outline-primary btn-sm flex-fill"
+                      >
                         ← Poprzedni
                       </button>
+
                       <button onClick={goToToday} className="btn btn-primary btn-sm">Dzisiaj</button>
                       <button onClick={goToNextDay} className="btn btn-outline-primary btn-sm flex-fill">
                         Następny →
@@ -279,7 +282,7 @@ function App() {
                     <div className="text-center fw-bold">{formatFullDate(selectedDate)}</div>
                   </div>
                   <div className="text-center mb-3">
-                    <small className="text-muted">Dowolny dzień (nawet przyszły)</small>
+                  <small className="text-muted">Dowolny dzień (nawet przyszły)</small>
                   </div>
                   <div className="text-center">
                     <button onClick={handleAdd} className="btn btn-success w-100">Dodaj kupę 💩</button>
